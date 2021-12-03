@@ -7,9 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import "KSCUEmbedAdConfig.h"
-#import "KSCUContentPageDelegate.h"
-#import "KSCUCallBackProtocol.h"
 #import "KSCUOuterController.h"
+#import "KSCUCallBackProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -39,6 +38,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithPosId:(NSString *)posId withDeepLink:(NSString *)deepLink;
 
 - (void)tryToRefresh;
+
+#pragma mark - 电商使用
+- (instancetype)initWithPosId:(NSString *)posId promoteID:(nullable NSString *)promoteID comment:(nullable NSString *)comment;
+- (instancetype)initWithPosId:(NSString *)posId withDeepLink:(NSString *)deepLink promoteID:(nullable NSString *)promoteID comment:(nullable NSString *)comment;
 
 #pragma mark - 挽留弹窗相关
 /**
